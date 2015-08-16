@@ -1,0 +1,7 @@
+---
+
+- src: geerlingguy.memcached
+  path: roles/
+
+- src: williamyeh.prometheus
+  path: roles/

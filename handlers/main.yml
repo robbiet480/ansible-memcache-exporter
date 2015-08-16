@@ -1,0 +1,27 @@
+---
+# file: handlers/main.yml
+#
+
+- name: restart memcache_exporter
+  service: name=memcache_exporter state=restarted
+  when: memcache_exporter_use_service|bool
+#
+#- name: restart memcache_exporter
+#  command: /usr/bin/env memcache_exporter -s reload
+#  when: not memcache_exporter_use_service|bool
+
+- name: reload memcache_exporter
+  service: name=memcache_exporter state=reloaded
+  when: memcache_exporter_use_service|bool
+#
+#- name: reload memcache_exporter
+#  command: /usr/bin/env memcache_exporter -s reload
+#  when: not memcache_exporter_use_service|bool
+
+- name: stop memcache_exporter
+  service: name=memcache_exporter state=stopped
+  when: memcache_exporter_use_service|bool
+#
+#- name: stop memcache_exporter
+#  command: /usr/bin/env memcache_exporter -s stop
+#  when: not memcache_exporter_use_service|bool
