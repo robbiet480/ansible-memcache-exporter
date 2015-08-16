@@ -34,7 +34,7 @@ None.
 ```yaml
 # memcache Connection String URI
 # @see http://docs.memcache.org/manual/reference/connection-string/
-memcache_exporter_memcache_uri:  "memcache://localhost:27017"
+memcache_exporter_memcache_uri:  "localhost:11211"
 ```
 
 
@@ -96,7 +96,7 @@ Simple example:
 
   vars:
 
-    memcache_exporter_memcache_uri:  "memcache://adm:password@localhost:27017"
+    memcache_exporter_memcache_uri:  "localhost:11211"
 
 
 ```
