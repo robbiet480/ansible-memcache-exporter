@@ -34,7 +34,7 @@ RETVAL=0
 
 
 DAEMON_OPTS=
-DAEMON_OPTS="$DAEMON_OPTS -logtostderr=true {{ memcache_exporter_memcache_uri }}"
+DAEMON_OPTS="$DAEMON_OPTS -logtostderr=true -web.listen-address=:{{ memcache_exporter_port }} {{ memcache_exporter_memcache_uri }}"
 
 
 

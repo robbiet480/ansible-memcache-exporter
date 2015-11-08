@@ -35,6 +35,7 @@ None.
 # memcache Connection String URI
 # @see http://docs.memcache.org/manual/reference/connection-string/
 memcache_exporter_memcache_uri:  "localhost:11211"
+memcache_exporter_port:  9106
 ```
 
 
